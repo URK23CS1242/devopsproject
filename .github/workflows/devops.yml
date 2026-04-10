@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Build Docker Image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/smartstay .
+      run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/smartstay:latest .
 
     - name: Push Docker Image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/smartstay
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/smartstay:latest
